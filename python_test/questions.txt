@@ -1,0 +1,56 @@
+Q1. Draw diagram and explain when to use static table view and dynamic
+table.
+Q2. With respect to table view, what are delegate and data source? Draw the diagram and explain relationship between them.
+Q3. Related to table view, which two protocols needs to conform by ViewController? Write and explain sample Swift code for “numberOfRowInSection” and “cellForRowAtIndexPath”.
+Q4. Draw diagram and explain use of “dequeueReusableCell” with respect to TableView.
+Q5. Draw diagram and explain use of any UITableViewCellStyle.
+Q6. Draw the diagrams and explain what are “table view”, “table view cell”, “table data”, “plain table”, and “grouped table”.
+Q7. With appropriate examples, explain creation and usage of designated initialize and convenience initialize.
+Q8. Write Swift code to call following “createItem” function with at least two different syntaxes. What is the significance and use of @discardableResult?
+Q9. A class “ItemsViewController” conforms to UITableViewController. List and explain functions need to be implemented in “ItemsViewController” class.
+Q10. Discuss the uses of UITableView editing mode.
+Q11. Write and explain Swift code for updating row from UITableView.
+Q12. UITableView is Model or View or Controller? Discuss with appropriate example.
+Q13. Write Swift code for inserting and deleting row from UITableView.
+Q14. What are the usages of UIAlertController? Discuss “alert” and “actionSheet” styles of it.
+Q15. Write and explain Swift code to accept Student name using UIAlertController and set value in the instance of student class.
+Q16. Analyze following Swift code and explain meaning of each line. overridefunctableView(_ tableView: UITableView, commiteditingStyle: UITableViewCellEditingStyle,
+forRowAtindexPath: IndexPath) {
+ifeditingStyle == .delete
+{
+let item = itemStore.allItems[indexPath.row]
+let title = "Delete \(item.name)?"
+let message = "Are you sure you want to delete this item?"
+let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+letcancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+ac.addAction(cancelAction)
+letdeleteAction = UIAlertAction(title: "Delete", style: .destructive,
+handler: { (action) -> Void in
+self.tableView.deleteRows(at: [indexPath], with: .automatic)
+})
+ac.addAction(deleteAction)
+present(ac, animated: true, completion: nil)
+}
+}
+Q17. Write Swift code to create “ItemCell” class, which inherits from
+UITableViewCell and provides customize cell view using at least two sub
+views.
+Q18. "My iOS Solutions" company is developing iOS mobile application to
+display product name, image, price in UITAbleView. Write and explain
+Swift code snippet required to implement cellForRowAtIndexPath.
+
+Q19. Analyze following Swift code and explain meaning of each line.
+override func awakeFromNib ( ) {
+super.awakeFromNib( )
+nameLabel.adjustsFontForContentSizeCategory = true
+valueLabel.adjustsFontForContentSizeCategory = true
+}
+Q20. Write code snippet and explain “customize appearance of
+UITableViewCell subclasses”.
+Q21. With appropriate example, explain the use of “tableView.rowHeight” and
+“tableView.estimatedRowHeight”.
+Q22. Write Swift code and explain concept of Dynamic type with respect to
+UITableViewCell.
+Q23. Step-by-step explain how to use “dynamic type” in table view.
+Q24. Table view cell should not under lap the status bar. Write sample code
+snippet and explain your solution.

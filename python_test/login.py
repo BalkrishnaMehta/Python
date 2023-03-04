@@ -1,0 +1,7 @@
+print("                               ----------------                   ")
+print("                               |    LOGIN     |                   ")
+print("                               ----------------                   ")
+text_file = open("signup.txt", "r")
+content = text_file.read()
+print(content)
+text_file.close()
